@@ -1,7 +1,6 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     font-family: 'Orbitron', sans-serif;
 }
 body {
@@ -11,18 +10,25 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
+    min-height: 95vh;
 }
 header {
-    font-size: 50px;
+    font-size: 45px;
     text-transform: uppercase;
     margin-bottom: 20px;
+    margin-top: 20px;
+    letter-spacing: 4px;
+}
+headermin {
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
     letter-spacing: 4px;
 }
 .social-icons {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 10px;
     margin-top: 20px;
 }
 .social-icons a {
