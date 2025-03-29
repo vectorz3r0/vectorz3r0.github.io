@@ -18,12 +18,18 @@ header {
     margin-bottom: 20px;
     margin-top: 20px;
     letter-spacing: 4px;
+    animation: pulseEffect 2s infinite ease-in-out;
 }
 headermin {
     font-size: 16px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 4px;
+    display: inline-block;
+    transition: transform 0.5s ease, opacity 0.5s ease;    
+}
+@keyframes pulseEffect {
+    50% { transform: scale(1.0125); }
 }
 .social-icons {
     display: flex;

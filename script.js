@@ -1,4 +1,3 @@
-/* headermin text update function */
 let i = 0;
 const texts = [
     'animated', 
@@ -10,11 +9,22 @@ const texts = [
 
 function updateHeadermin() {
     const textElement = document.getElementById('headermin');
-    textElement.textContent = texts[i];
     
-    i++;
-    if (i >= texts.length) {
-        i = 0;
-    }
+    textElement.style.transform = 'translateY(100%)';
+    textElement.style.opacity = '0';
+    
+    setTimeout(() => {
+        textElement.textContent = texts[i];
+        i = (i + 1) % texts.length;
+        
+        textElement.style.transform = 'translateY(-100%)';
+        textElement.style.opacity = '0';
+        
+        setTimeout(() => {
+            textElement.style.transform = 'translateY(0)';
+            textElement.style.opacity = '1';
+        }, 50);
+    }, 500);
 }
-setInterval(updateHeadermin, 1000);
+
+setInterval(updateHeadermin, 2000);
